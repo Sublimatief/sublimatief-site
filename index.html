@@ -5,9 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sublimatief — Handmade with Love</title>
   <meta name="description" content="Sublimatief: handgemaakte cadeaus en woondecoraties met liefde gemaakt. Uniek, duurzaam en persoonlijk." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: light dark; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+    .gradient-text { background: linear-gradient(90deg, #7f00ff, #e100ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-bg { background: linear-gradient(90deg, #7f00ff, #e100ff); }
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.6); }
+    @media (prefers-color-scheme: dark) { .glass { background: rgba(0,0,0,0.35); } }
+  </style>
 </head>
-<body>
-  <h1>Sublimatief</h1>
-  <p>Welkom op de website van Sublimatief. Handmade with love!</p>
+<body class="bg-gradient-to-b from-white to-slate-100 dark:from-slate-900 dark:to-slate-950 text-slate-800 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-white/70 dark:bg-slate-900/60 border-b border-slate-200/50 dark:border-slate-700/50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <img src="logo.png" alt="Sublimatief logo" class="h-10 w-10" />
+        <span class="font-extrabold text-xl gradient-text">Sublimatief</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#producten" class="hover:opacity-80">Producten</a>
+        <a href="#maatwerk" class="hover:opacity-80">Maatwerk</a>
+        <a href="#galerij" class="hover:opacity-80">Galerij</a>
+        <a href="#reviews" class="hover:opacity-80">Reviews</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+      </nav>
+      <a href="#bestellen" class="inline-flex items-center px-4 py-2 rounded-2xl gradient-bg text-white text-sm font-semibold shadow hover:opacity-90">Bestel nu</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight gradient-text">Handmade with Love</h1>
+        <p class="mt-4 text-base md:text-lg text-slate-600 dark:text-slate-300">Unieke tegeltjes en cadeaus, met liefde handgemaakt. Perfect voor elk speciaal moment.</p>
+        <div class="mt-6 flex gap-3">
+          <a id="bestellen" href="#contact" class="px-5 py-3 rounded-2xl gradient-bg text-white font-semibold shadow">Vraag een offerte</a>
+          <a href="#galerij" class="px-5 py-3 rounded-2xl border border-slate-300 dark:border-slate-600 font-semibold">Bekijk voorbeelden</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" alt="Handgemaakte tegeltjes" class="rounded-2xl shadow" />
+        <img src="https://images.unsplash.com/photo-1521605105336-30f1304b2e26?q=80&w=800&auto=format&fit=crop" alt="Persoonlijke cadeaus" class="rounded-2xl shadow mt-6" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Over ons -->
+  <section id="over" class="py-16 bg-white/60 dark:bg-slate-900/40">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold gradient-text">Over mij</h2>
+      <p class="mt-6 text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+        Hoi! Mijn naam is Petra en ik ben de creatieve kracht achter Sublimatief.<br><br>
+        Met liefde en oog voor detail maak ik persoonlijke cadeautjes zoals tegeltjes, kleine woondecoraties en unieke geschenken voor groot en klein.<br><br>
+        Of je nu op zoek bent naar iets grappigs, liefs of origineels - bij Sublimatief vind je altijd iets dat bij jouw wens past.<br>
+        Alles is handgemaakt, met aandacht en een vleugje humor of medeleven.<br><br>
+        Heb je een speciaal idee? Ik maak ook op bestelling!
+      </p>
+    </div>
+  </section>
+
+  <!-- Productcategorieën -->
+  <section id="producten" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold gradient-text">Productcategorieën</h2>
+      <p class="mt-4 text-base text-slate-600 dark:text-slate-300">Ontdek mijn diverse aanbod aan handgemaakte producten.</p>
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Bekers</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Tumblers</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Onderzetters</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Tassen</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Houtbewerking</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition">
+          <p class="font-semibold">Kaarten</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow hover:shadow-lg transition col-span-2 md:col-span-1">
+          <p class="font-semibold">Tegels</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white/60 dark:bg-slate-900/40">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold gradient-text">Contact</h2>
+      <p class="mt-4 text-base md:text-lg text-slate-700 dark:text-slate-300">
+        Heb je een vraag of wil je iets op maat laten maken? Stuur gerust een mailtje naar
+        <a href="mailto:sublimatief@gmail.com" class="underline">sublimatief@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="flex items-center gap-2">
+        <img src="logo.png" alt="Sublimatief logo" class="h-10 w-10" />
+        <p class="font-bold gradient-text text-lg">Sublimatief</p>
+      </div>
+      <div>
+        <p class="font-bold">Contact</p>
+        <ul class="mt-1 text-slate-500">
+          <li>E-mail: sublimatief@gmail.com</li>
+          <li>Amsterdam, NL</li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-bold">Volg</p>
+        <ul class="mt-1 text-slate-500">
+          <li><a href="#" class="underline">Instagram</a></li>
+          <li><a href="#" class="underline">Facebook</a></li>
+          <li><a href="#" class="underline">Etsy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-xs text-slate-400 mt-6">© <span id="year"></span> Sublimatief. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
